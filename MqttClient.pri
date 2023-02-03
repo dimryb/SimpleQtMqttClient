@@ -1,0 +1,13 @@
+MQTT_PATH = $(THIRD_PARTY)/qtmqtt-Desktop_Qt_5_12_2_MinGW_64_bit-Debug
+
+MQTT_BIN_PATH = $${MQTT_PATH}/bin
+MQTT_LIBS_PATH =  $${MQTT_PATH}/lib/
+
+LIBS += -L$$MQTT_LIBS_PATH
+LIBS += -llibQt5Mqtt
+
+MQTT_INCLUDE_PATH = $${MQTT_PATH}/include
+
+INCLUDEPATH += $$MQTT_INCLUDE_PATH
+
+MQTT_INSTALLS = $${MQTT_BIN_PATH}/*.dll
